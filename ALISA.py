@@ -6,7 +6,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 st.set_page_config(page_title="Visualizador de Extrato", layout="centered")
-st.title("📄 Visualizador de Extrato Bancário - Junho 2025")
+st.title("📄 Valores A LISA Extrato Bancário")
 
 # Upload do arquivo
 uploaded_file = st.file_uploader("📂 Envie o arquivo Excel do extrato", type=["xlsx"])
@@ -26,7 +26,7 @@ if uploaded_file:
     total_geral = df_filtered['Valor'].sum()
 
     # Exibição
-    st.subheader("🔍 Valores por Histórico")
+    st.subheader("🔍 Valores por Adquirente")
     st.dataframe(resumo, use_container_width=True)
 
     st.subheader("🧮 Total Geral")
